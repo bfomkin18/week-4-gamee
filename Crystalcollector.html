@@ -9,6 +9,8 @@
 
 <link rel="stylesheet" type="text/css" href="assets\css\reset.css">
 
+<link rel="stylesheet" type="text/css" href="assets\javascript\game.js">
+
 	<title>Crystal Collector!</title>
 </head>
 <<body background="assets/images/crystal.jpg">>
@@ -34,7 +36,7 @@
 <div class="col-lg-3, col-xs-3, col-md-3"><img src="assets/images/crystalside.png" class="img-responsive" class="img-rounded" alt="Cinque Terre" width="200" height="256"></div>
 <div class="col-lg-3"></div>
 <div class="col-lg-6" id="computerguess">
-	<p class="bg-success">{insert Computer Random #}</p></div>
+	<p class="bg-success" id="demo"></p></div>
 <div class="col-lg-3">
 	<p class="bg-info">Wins:</p>
 	<p class="bg-info">Losses:</p>
@@ -43,10 +45,16 @@
 <div class="container">
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8">
-<img src="assets/images/gemgreen.png" class="img-circle" alt="Cinque Terre" width="150" height="140">
-<img src="assets/images/gempink.png" class="img-circle" alt="Cinque Terre" width="150" height="140">
-<img src="assets/images/gemorange.png" class="img-circle" alt="Cinque Terre" width="150" height="140">
-<img src="assets/images/gemyellow.png" class="img-circle" alt="Cinque Terre" width="150" height="140">
+<button on click="myFunction"><img src="assets/images/gemgreen.png" class="img-circle" alt="Cinque Terre" id="green" width="150" height="140"></button>
+<script>
+function myFunction() {
+    var x = Math.floor((Math.random() * 99) + 1);
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+<button on click="myFunction"><img src="assets/images/gempink.png" class="img-circle" alt="Cinque Terre" id="pink" width="150" height="140"></button>
+<button on click="myFunction"><img src="assets/images/gemorange.png" class="img-circle" alt="Cinque Terre" id="orange" width="150" height="140"></button>
+<button on click="myFunction"><img src="assets/images/gemyellow.png" class="img-circle" alt="Cinque Terre" id="yellow" width="150" height="140"></button>
 	</div>
 	<div class="col-lg-2"></div>
 </div>
